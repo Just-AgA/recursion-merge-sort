@@ -18,3 +18,17 @@ function fibs(num) {
     return result;
 }
 
+function fibsRec(num) {
+    if (num <= 0) return [];
+    if (num === 1) return [0];
+    if (num === 2) return [0, 1];
+
+    const seq = fibsRec(num - 1);
+    seq.push(seq[seq.length - 1] + seq[seq.length - 2]);
+  return seq;
+}
+
+console.log(`The 8th fibonacci element is ${fibs(8)}`);
+console.log(`The 10th fibonacci element is ${fibs(10)}`);
+console.log(`The 8th fibonacci element is ${fibsRec(8)}`);
+console.log(`The 10th fibonacci element is ${fibsRec(10)}`);
