@@ -4,7 +4,7 @@ function mergeSort(array) {
     const leftSide = array.slice(0, midPoint);
     const rightSide = array.slice(midPoint);
 
-    if(array.length === 1) return array;
+    if(array.length <= 1) return array;
 
     return merge(mergeSort(leftSide), mergeSort(rightSide));
 }
