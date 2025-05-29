@@ -1,4 +1,13 @@
+function mergeSort(array) {
+    // Create midpoint so we can split the array as evenly as possible
+    const midPoint = Math.floor(array.length / 2);
+    const leftSide = array.slice(0, midPoint);
+    const rightSide = array.slice(midPoint);
 
+    if(array.length === 1) return array;
+
+    return merge(mergeSort(leftSide), mergeSort(rightSide));
+}
 
 function merge(arrayLeft, arrayRight) {
     // Create another array and two indexes
