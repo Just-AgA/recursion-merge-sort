@@ -19,6 +19,16 @@ function LinkedList() {
         size++;
     }
 
+    const prepend = (value) => {
+        const newNode = Node(value, head);
+        head = newNode;
+         if (!tail) {
+            tail = newNode;
+        }
+
+        size++;
+    }
+
     
 }
 
