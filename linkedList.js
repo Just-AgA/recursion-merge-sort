@@ -29,6 +29,26 @@ function LinkedList() {
         size++;
     }
 
+    const getSize = () => size;
+    const getHead = () => head;
+    const getTail = () => tail;
+
+    const getNodeAt = index => {
+
+        let current = head;
+        let count = 0;
+
+        if(!head) return -1;
+
+        while(current !== null){
+            if(count === index) return current.value;
+            count++;
+            current = current.nextNode;
+        }
+
+        return `Index out of bounds`;
+    }
+
     
 }
 
