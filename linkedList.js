@@ -49,6 +49,31 @@ function LinkedList() {
         return `Index out of bounds`;
     }
 
+    const pop = () => {
+        if(!head) return null;
+        
+        if(!head.nextNode) {
+            const value = head.value;
+            head = null;
+            tail = null;
+            size--;
+            return value;
+            }
+        
+        let previous = head;
+        let node = head.nextNode;
+        
+        while (node.nextNode) {
+         previous = node;
+         node = node.nextNode;
+        }
+            
+        previous.nextNode = null;
+        tail = previous;
+        size--;
+        return node.value;
+    }
+
     
 }
 
