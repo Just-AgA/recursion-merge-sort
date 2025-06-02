@@ -86,6 +86,21 @@ function LinkedList() {
 
     }
 
+    const find = value => {
+        let current = head;
+        let index = 0;
+
+        if(!head) return -1;
+
+        while(current !== null){
+            if(current.value === value) return index;
+            index++;
+            current = current.nextNode;
+        }
+
+        return null;
+    }
+
     
 }
 
