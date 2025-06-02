@@ -74,6 +74,18 @@ function LinkedList() {
         return node.value;
     }
 
+    const contains = value => {
+        let node = head;
+        
+        while (node) {
+         if(node.value === value) return true;
+         node = node.nextNode;
+        }
+
+         return false;
+
+    }
+
     
 }
 
