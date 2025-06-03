@@ -111,6 +111,19 @@ function LinkedList() {
     result += 'null';
     return result;
   };
+
+  return {
+    append,
+    prepend,
+    getHead,
+    getSize,
+    getTail,
+    getNodeAt,
+    pop,
+    contains,
+    find,
+    toString,
+  };
 }
 
 export { LinkedList };
